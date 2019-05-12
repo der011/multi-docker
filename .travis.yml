@@ -9,14 +9,14 @@ script:
   - docker run der011/react-test npm test
 
 after_success:
-  - docker build -t der011/multi-client ./client  
   - docker build -t der011/multi-nginx ./nginx  
   - docker build -t der011/multi-server ./server  
   - docker build -t der011/multi-worker ./worker
+  - docker build -t der011/multi-client ./client  
   # Log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take images and push to docker hub
-  - docker push der011/multi-client
   - docker push der011/multi-nginx
   - docker push der011/multi-server
   - docker push der011/multi-worker
+  - docker push der011/multi-client
