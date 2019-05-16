@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1 className="App-Title">Welcome  to Reaact</h1>
+          <h1 className="App-Title">Welcome  to Reaact New</h1>
           <Link to="/">Home</Link>
           <Link to="/otherPage">Other Page</Link>
         </header>
